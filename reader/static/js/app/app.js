@@ -1,6 +1,5 @@
-var ReaderApp = angular.module('ReaderApp', [] , function($interpolateProvider) {
-    $interpolateProvider.startSymbol("{[{");
-    $interpolateProvider.endSymbol("}]}");
+var ReaderApp = angular.module('ReaderApp', ['ngRoute'], function() {
+
 });
 
 ReaderApp.config(function($routeProvider) {

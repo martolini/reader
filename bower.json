@@ -1,11 +1,15 @@
 {
-    "name": "reader",
-    "version": "1.0.0",
-    "dependencies": {
-        "angular": "1.2.13",
-        "angular-resource": "1.2.13",
-        "underscore": "",
-        "bootstrap": ">=3.0"
-    },
-    "private": true
+  "name": "reader",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "1.2.13",
+    "angular-resource": "1.2.13",
+    "underscore": "",
+    "bootstrap": ">=3.0",
+    "angular-route": "1.2.6"
+  },
+  "private": true,
+  "resolutions": {
+    "angular": "1.2.6"
+  }
 }
