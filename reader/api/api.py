@@ -24,7 +24,7 @@ class ArticleMixin(object):
     model = Article
     serializer_class = ArticleSerializer
     permission_classes = [
-        permissions.ArticleAuthorCanEditPermission
+        ArticleAuthorCanEditPermission
     ]
     
     def pre_save(self, obj):
