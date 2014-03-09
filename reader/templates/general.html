@@ -1,0 +1,17 @@
+<html ng-app="ReaderApp">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ STATIC_URL }}assets/bootstrap/dist/css/bootstrap.min.css">
+
+	<script src="{{ STATIC_URL }}assets/jquery/dist/jquery.min.js"></script>
+	<script src="{{ STATIC_URL }}assets/angular/angular.min.js"></script>
+	<script src="{{ STATIC_URL }}js/app/app.js"></script>
+	{% block extra_head %}{% endblock %}
+	<title>
+		Reader er kuult
+	</title>
+</head>
+<body ng-controller="AppCtrl">
+	{% block site_wrapper %}{% endblock %}
+</body>
+</html>

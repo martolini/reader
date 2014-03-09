@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block extra_head %}
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <script src="{{ STATIC_URL }}js/app/controllers/appctrl.js"></script>
+    <script src="{{ STATIC_URL }}js/app/controllers/mainctrl.js"></script>
+    <script src="{{ STATIC_URL }}js/app/services/services.js"></script>
+    <script src="{{ STATIC_URL }}js/app/directives/directives.js"></script>
+    <script src="{{ STATIC_URL }}js/app/filters/filters.js"></script>
+{% endblock %}
+{% block content %}
+    <div class="padded-content">
+        <div id="main-content" class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="pending-bg" pending-bar>
+                        <div class="alert alert-warning">loading ...</div>
+                    </div>
+                </div>
+             </div>
+                <ng-view></ng-view>
+        </div>
+    </div>
+{% endblock %}
+{% block extra_content %}
+<script type="text/javascript"></script>
+{% endblock %}
