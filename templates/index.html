@@ -31,5 +31,9 @@
     </div>
 {% endblock %}
 {% block extra_content %}
-<script type="text/javascript"></script>
+<script type="text/javascript">
+    ReaderApp.config(['$httpProvider', function($httpProvider) {
+        $httpProvider.defaults.headers.common['X-CSRFToken'] = '{{ csrf_token|escapejs }}';
+    }]);
+</script>
 {% endblock %}

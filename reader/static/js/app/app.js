@@ -1,7 +1,6 @@
 var ReaderApp = angular.module('ReaderApp', ['ngRoute', 'ngResource'], function() {});
 
-ReaderApp.config(function($routeProvider, $httpProvider) {
-    $httpProvider.defaults.headers.common['X-CSRFToken'] = '{{ csrf_token|escapejs }}';
+ReaderApp.config(function($routeProvider) {
     $routeProvider
         .when("/", {
             templateUrl: "static/js/app/views/main.html",
