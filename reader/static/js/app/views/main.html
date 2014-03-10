@@ -1,1 +1,22 @@
-<h3>{{test}}</h3>
+<div class="row">
+	<div class="col-lg-3 side-content">
+		<h3>Profile</h3>
+	</div>
+	<div class="col-lg-8 main-content">
+		<h3>Links</h3>
+		<form class="form" ng-submit="addLink()">
+			<h5>Add link</h5>
+			<div class="form-group">
+				<input type="url" class="form-control" placeholder="http://" ng-model="article.url"></input>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-default">Send</button>
+			</div>
+		</form>
+		<div ng-repeat="article in articles">
+			{{article.url}}
+		</div>
+	</div>
+</div>
+
+

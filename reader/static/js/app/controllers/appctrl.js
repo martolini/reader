@@ -1,3 +1,6 @@
-ReaderApp.controller('AppCtrl', function($scope) {
-    $scope.test = "Martin er best i app";
+ReaderApp.controller('AppCtrl', function($scope, GlobalService) {
+    $scope.globals = GlobalService;
+    $scope.initialize = function(user) {
+        if (user !== "AnonymousUser") $scope.globals.username = user;
+    };
 });
