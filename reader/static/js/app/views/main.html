@@ -1,6 +1,7 @@
-<div class="row">
+<div class="row" ng-show="globals.is_authenticated">
 	<div class="col-lg-3 side-content">
 		<h3>Profile</h3>
+		{{currentUser}}
 	</div>
 	<div class="col-lg-8 main-content">
 		<h3>Links</h3>
@@ -15,10 +16,12 @@
 		</form>
 		<div class="list-group" >
 			<a href="{{article.url}}" class="list-group-item" ng-repeat="article in articles">
-				<h4 class="list-group-item-heading">List group item heading</h4>
+				<h4 class="list-group-item-heading">Title</h4>
 				<p class="list-group-item-text">{{article.url}}</p>
 			</a>
 		</div>
+		<script type="text/javascript">
+		</script>
 	</div>
 </div>
 

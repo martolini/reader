@@ -18,3 +18,7 @@ urlpatterns = patterns('',
     url(r'^users', include(user_urls)),
     url(r'^articles', include(article_urls)),
 )
+
+urlpatterns += patterns('reader.api.views',
+	url(r'^login/$', 'login_view'),
+)
