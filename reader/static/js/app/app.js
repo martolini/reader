@@ -15,6 +15,7 @@ var ReaderApp = angular.module('ReaderApp', ['ngRoute', 'ngResource'], function(
     })
     .run(function($rootScope, $location) {
         $rootScope.$on("$routeChangeStart", function(event, next, current) {
+            console.log($rootScope.loggedUser);
             if ($rootScope.loggedUser == null) {
                 // no logged user, we should be going to #login
                 if (next.templateUrl == "static/js/app/views/login.html") {
@@ -22,6 +23,10 @@ var ReaderApp = angular.module('ReaderApp', ['ngRoute', 'ngResource'], function(
                 } else {
                     // not going to #login, we should redirect now
                     $location.path("/login");
+                }
+            } else  {
+                if (next.templateUrl == "static/js/app/views/login.html") {
+                    $location.path("/");
                 }
             }
         })

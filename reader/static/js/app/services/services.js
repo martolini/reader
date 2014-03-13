@@ -4,8 +4,9 @@ ReaderApp.factory('User', function($resource) {
     });
 });
 
-ReaderApp.factory('ArticleUser', function($resource, GlobalService) {
-    var username = GlobalService.username;
+ReaderApp.factory('ArticleUser', function($resource, $rootScope) {
+    var username = $rootScope.loggedUser.username;
+    console.log("Facot: " + username);
     return $resource('api/users/:username/articles', {
         username: username
     });
@@ -13,14 +14,6 @@ ReaderApp.factory('ArticleUser', function($resource, GlobalService) {
 
 ReaderApp.factory('Article', function($resource) {
     return $resource('api/articles');
-});
-
-ReaderApp.factory('GlobalService', function() {
-    var vars = {
-        is_authenticated: false,
-        username: null
-    };
-    return vars;
 });
 
 ReaderApp.factory('Auth', function($resource) {

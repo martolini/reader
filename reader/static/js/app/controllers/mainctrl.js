@@ -1,6 +1,6 @@
-ReaderApp.controller('MainCtrl', function($scope, User, ArticleUser, Article, GlobalService, $http, Auth) {
+ReaderApp.controller('MainCtrl', function($rootScope, $scope, User, ArticleUser, Article, $http, Auth) {
     $scope.articles = ArticleUser.query();
-
+    console.log($scope.articles);
     $scope.article = new Article();
     $scope.addLink = function() {
         $scope.article.$save().then(function(result) {
@@ -8,9 +8,5 @@ ReaderApp.controller('MainCtrl', function($scope, User, ArticleUser, Article, Gl
         }).then(function() {
             $scope.article = new Article();
         });
-    };
-
-    $scope.login = function() {
-        console.log(Article.query());
     };
 });

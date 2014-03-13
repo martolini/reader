@@ -1,10 +1,8 @@
-ReaderApp.controller('AppCtrl', function($scope, GlobalService, $rootScope) {
-    $scope.globals = GlobalService;
+ReaderApp.controller('AppCtrl', function($scope, $rootScope) {
     $scope.initialize = function(user) {
         if (user !== "AnonymousUser") {
-            $scope.globals.username = user;
-            $scope.globals.is_authenticated = true;
-            $rootScope.loggedUser = user;
+            $rootScope.loggedUser = {};
+            $rootScope.loggedUser.username = user;
         }
     };
 });

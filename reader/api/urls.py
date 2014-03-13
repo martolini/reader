@@ -20,5 +20,5 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('reader.api.views',
-	url(r'^login/$', 'login_view'),
+	url(r'^login$', 'login_view'),
 )
